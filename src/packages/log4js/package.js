@@ -6,7 +6,8 @@ Package.describe({
   name: 'adain:log4js',
   summary: "log4js",
   version: '0.6.29',
-  git: 'https://github.com/ADAIN/meteor-log4js'
+  git: 'https://github.com/ADAIN/meteor-log4js',
+  documentation: 'README.md'
 });
 
 Npm.depends({'log4js' : '0.6.29'});
