@@ -5,13 +5,9 @@
  */
 log4js = Npm.require('log4js');
 
-var logPath = 'service.log';
+var logPath = process.env.LOG_PATH || 'service.log';
 var logSize = 1024 * 1024 * 15;
 var logCount = 20;
-
-if(process.env.LOG_PATH !== undefined){
-  logPath = process.env.LOG_PATH;
-}
 
 if(process.env.LOG_SIZE !== undefined){
   logSize = 1024 * 1024 * parseInt(process.env.LOG_SIZE);
@@ -26,8 +22,7 @@ log4js.configure({
     { type: 'file',
       filename: logPath,
       maxLogSize: logSize,
-      backups: logCount,
-      category: 'puf'
+      backups: logCount
     }
   ]
 });

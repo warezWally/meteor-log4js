@@ -5,7 +5,7 @@
 Package.describe({
   name: 'adain:log4js',
   summary: "log4js",
-  version: '0.6.29',
+  version: '1.0.0',
   git: 'https://github.com/ADAIN/meteor-log4js',
   documentation: 'README.md'
 });
