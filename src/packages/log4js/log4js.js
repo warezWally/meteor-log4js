@@ -33,8 +33,8 @@ var log = log4js.getLogger("LogSystem");
 LogSystem = {
   /**
    * insert log
-   * @param logType
-   * @param message
+   * @param {string} logType
+   * @param {string} message
    */
   insertLog: function(logType, message){
     log.info('[' + logType + '] ' + message);
@@ -42,7 +42,7 @@ LogSystem = {
 
   /**
    * object log
-   * @param object
+   * @param {*} obj
    */
   log: function(obj){
     log.info(obj);
@@ -57,8 +57,8 @@ LogSystem = {
 
   /**
    * insert error
-   * @param logType
-   * @param message
+   * @param {string} logType
+   * @param {string} message
    */
   insertError: function(logType, message){
     log.error('[' + logType + '] ' + message);
@@ -66,7 +66,7 @@ LogSystem = {
 
   /**
    * insert object error
-   * @param object
+   * @param {*} obj
    */
   error: function(obj){
     log.error(obj);
@@ -74,7 +74,7 @@ LogSystem = {
 
   /**
    * debug log
-   * @param object
+   * @param {*} obj
    */
   debug: function(obj){
     log.debug(obj);
@@ -82,7 +82,7 @@ LogSystem = {
 
   /**
    * trace
-   * @param object
+   * @param {*} obj
    */
   trace: function(obj){
     log.trace(obj);
@@ -90,7 +90,7 @@ LogSystem = {
 
   /**
    * warn
-   * @param object
+   * @param {*} obj
    */
   warn: function(obj){
     log.warn(obj);
@@ -98,7 +98,7 @@ LogSystem = {
 
   /**
    * fatal
-   * @param obj
+   * @param {*} obj
    */
   fatal: function(obj){
     log.fatal(obj);
