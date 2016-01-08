@@ -30,14 +30,6 @@ log4js.configure({
 });
 
 var log = log4js.getLogger("LogSystem");
-
-log.info("//==================================================");
-log.info("// log4js service initialize");
-log.info("//==================================================");
-log.info("log path: " + logPath);
-log.info("log size: " + logSize);
-log.info("log count: " + logCount);
-
 LogSystem = {
   /**
    * insert log
@@ -52,8 +44,8 @@ LogSystem = {
    * object log
    * @param object
    */
-  log: function(object){
-    log.info(object);
+  log: function(obj){
+    log.info(obj);
   },
 
   /**
@@ -76,19 +68,54 @@ LogSystem = {
    * insert object error
    * @param object
    */
-  error: function(object){
-    log.error(object);
+  error: function(obj){
+    log.error(obj);
   },
 
   /**
    * debug log
-   * @param message
+   * @param object
    */
-  debug: function(message){
-    if(process.env.NODE_ENV === "development"){
-      console.log(message);
-    }else{
-      log.debug(message);
-    }
+  debug: function(obj){
+    log.debug(obj);
+  },
+
+  /**
+   * trace
+   * @param object
+   */
+  trace: function(obj){
+    log.trace(obj);
+  },
+
+  /**
+   * warn
+   * @param object
+   */
+  warn: function(obj){
+    log.warn(obj);
+  },
+
+  /**
+   * fatal
+   * @param obj
+   */
+  fatal: function(obj){
+    log.fatal(obj);
+  },
+
+  /**
+   * get current logger
+   * @returns {*|Logger|{topic, should take a category and return a logger, log events}}
+   */
+  getLogger: function(){
+    return log;
   }
 };
+
+LogSystem.trace("////////////////////////////////////////////////");
+LogSystem.trace("// log4js service initialized");
+LogSystem.trace("////////////////////////////////////////////////");
+LogSystem.trace("log path: " + logPath);
+LogSystem.trace("log size: " + logSize);
+LogSystem.trace("log count: " + logCount);
