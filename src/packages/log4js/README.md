@@ -10,6 +10,7 @@ $ meteor install adain:log4js
 - LOG_PATH : log file path (default path : service.log)
 - LOG_SIZE : rolling file size MB (default : 15MB)
 - LOG_COUNT: max log file count (default : 20)
+- LOG_REPLACE_CONSOLE : replace console
 
 ## Usage
 ```javascript

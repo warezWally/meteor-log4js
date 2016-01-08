@@ -17,7 +17,7 @@ if(process.env.LOG_COUNT !== undefined){
   logCount = parseInt(process.env.LOG_COUNT);
 }
 
-log4js.configure({
+var config = {
   appenders: [
     {
       type: 'file',
@@ -27,7 +27,13 @@ log4js.configure({
       category: 'LogSystem'
     }
   ]
-});
+};
+
+if(process.env.LOG_REPLACE_CONSOLE !== undefined && process.env.LOG_REPLACE_CONSOLE === "1") {
+  config.replaceConsole = true;
+}
+
+log4js.configure(config);
 
 var log = log4js.getLogger("LogSystem");
 LogSystem = {
