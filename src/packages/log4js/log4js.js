@@ -26,11 +26,10 @@ log4js.configure({
       backups: logCount,
       category: 'LogSystem'
     }
-  ],
-  replaceConsole: true
+  ]
 });
 
-log = log4js.getLogger("service");
+var log = log4js.getLogger("LogSystem");
 
 log.info("//==================================================");
 log.info("// log4js service initialize");
