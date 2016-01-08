@@ -19,12 +19,15 @@ if(process.env.LOG_COUNT !== undefined){
 
 log4js.configure({
   appenders: [
-    { type: 'file',
+    {
+      type: 'file',
       filename: logPath,
       maxLogSize: logSize,
-      backups: logCount
+      backups: logCount,
+      category: 'LogSystem'
     }
-  ]
+  ],
+  replaceConsole: true
 });
 
 log = log4js.getLogger("service");
