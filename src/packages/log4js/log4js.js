@@ -119,9 +119,9 @@ LogSystem = {
   }
 };
 
-LogSystem.trace("////////////////////////////////////////////////");
-LogSystem.trace("// log4js service initialized");
-LogSystem.trace("////////////////////////////////////////////////");
-LogSystem.trace("log path: " + logPath);
-LogSystem.trace("log size: " + logSize);
-LogSystem.trace("log count: " + logCount);
+//LogSystem.trace("////////////////////////////////////////////////");
+//LogSystem.trace("// log4js service initialized");
+//LogSystem.trace("////////////////////////////////////////////////");
+//LogSystem.trace("log path: " + logPath);
+//LogSystem.trace("log size: " + logSize);
+//LogSystem.trace("log count: " + logCount);
