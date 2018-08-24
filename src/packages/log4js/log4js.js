@@ -2,6 +2,7 @@
  * 제작 : 장성용, jsy@adain.kr
  * 날짜 : 15. 3. 19.
  * 내용 :
+
  */
 log4js = Npm.require('log4js');
 
@@ -51,6 +52,14 @@ LogSystem = {
    * @param {*} obj
    */
   log: function(obj){
+    log.info(obj);
+  },
+  
+  /**
+   * object info
+   * @param {*} obj
+   */
+  info: function(obj){
     log.info(obj);
   },
 
